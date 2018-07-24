@@ -204,17 +204,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="256" height="40"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" imageScaling="axesIndependently" image="bartop" id="dUO-ks-MIG"/>
                                         </imageView>
-                                        <imageView focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rjW-vB-bYr">
-                                            <rect key="frame" x="80" y="8" width="24" height="24"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="24" id="7OA-cE-kzk"/>
-                                                <constraint firstAttribute="width" secondItem="rjW-vB-bYr" secondAttribute="height" multiplier="1:1" id="ZFQ-mq-Hne"/>
-                                            </constraints>
-                                            <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" image="appicons" id="sum-94-ZNt"/>
-                                        </imageView>
                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ubM-aJ-3yl">
-                                            <rect key="frame" x="112" y="12" width="138" height="16"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" focusRingType="none" alignment="left" title="Life Icon Generator " id="By3-NG-myF">
+                                            <rect key="frame" x="83" y="12" width="105" height="16"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" focusRingType="none" alignment="left" title="Icon Generator " id="By3-NG-myF">
                                                 <font key="font" size="12" name="HiraKakuPro-W6"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -222,14 +214,12 @@
                                         </textField>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="ubM-aJ-3yl" secondAttribute="trailing" constant="8" id="5qZ-NY-xVm"/>
                                         <constraint firstItem="ubM-aJ-3yl" firstAttribute="centerY" secondItem="WW6-Mt-7Mn" secondAttribute="centerY" id="7Hw-of-W0B"/>
+                                        <constraint firstItem="ubM-aJ-3yl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WW6-Mt-7Mn" secondAttribute="leading" id="B0X-1k-bIE"/>
                                         <constraint firstItem="F0U-kY-xn6" firstAttribute="leading" secondItem="WW6-Mt-7Mn" secondAttribute="leading" id="Vqa-Gq-bba"/>
+                                        <constraint firstAttribute="trailing" secondItem="ubM-aJ-3yl" secondAttribute="trailing" constant="70" id="XeP-r5-Zb8"/>
                                         <constraint firstItem="F0U-kY-xn6" firstAttribute="top" secondItem="WW6-Mt-7Mn" secondAttribute="top" id="ZqG-wq-rVB"/>
-                                        <constraint firstItem="ubM-aJ-3yl" firstAttribute="leading" secondItem="rjW-vB-bYr" secondAttribute="trailing" constant="10" id="hMJ-Lx-NMg"/>
-                                        <constraint firstItem="rjW-vB-bYr" firstAttribute="leading" secondItem="WW6-Mt-7Mn" secondAttribute="leading" constant="80" id="lqb-wk-gs1"/>
                                         <constraint firstAttribute="bottom" secondItem="F0U-kY-xn6" secondAttribute="bottom" id="n32-lY-sTO"/>
-                                        <constraint firstItem="rjW-vB-bYr" firstAttribute="centerY" secondItem="WW6-Mt-7Mn" secondAttribute="centerY" id="oKS-Ii-4b2"/>
                                         <constraint firstAttribute="trailing" secondItem="F0U-kY-xn6" secondAttribute="trailing" id="yjH-s8-Mro"/>
                                     </constraints>
                                 </view>
@@ -503,7 +493,6 @@ Gw
     </scenes>
     <resources>
         <image name="App-Icon-Default" width="256" height="256"/>
-        <image name="appicons" width="256" height="256"/>
         <image name="bartop" width="1254" height="100"/>
         <image name="export" width="22.399999618530273" height="22.399999618530273"/>
         <image name="icar" width="28" height="26"/>

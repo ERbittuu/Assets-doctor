@@ -20,4 +20,16 @@ extension NSAlert {
             completion?()
         }
     }
+    
+    static func dialogThanks(url: URL) {
+        let alert = NSAlert()
+        alert.messageText = "Life Icon"
+        alert.informativeText = "Icon converted successfully!! 😊 😊\nDo you want to open folder?"
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "Open")
+        alert.addButton(withTitle: "No Thanks")
+        if alert.runModal().rawValue == 1000 {
+            NSWorkspace.shared.open(url)
+        }
+    }
 }

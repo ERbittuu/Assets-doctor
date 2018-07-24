@@ -43,7 +43,7 @@ extension NSImage {
         }
     }
     
-    static let extList: [String] = ["tiff", "tif", "jpg", "jpeg", "gif", "png", "bmp", "bmpf", "ico", "cur", "xbm", "xcodeproj"]
+    static let extList: [String] = ["tiff", "tif", "jpg", "jpeg", "gif", "png", "bmp", "bmpf", "ico", "cur", "xbm"]
     
     static var pasteboardTypes : [NSPasteboard.PasteboardType]  {
         return self.extList.map { $0.pasteboardType }

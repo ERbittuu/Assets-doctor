@@ -19,24 +19,6 @@ class MainController: NSViewController {
         if let window = self.view.window {
             NSOpenPanel().selectImage(window: window) { (url) in
                 if let _url = url {
-                    
-                    if _url.pathExtension == "xcodeproj" {
-                        
-//                        let proj = try! XCProjectFile(xcodeprojURL: _url)
-//                        print(proj)
-//                        
-//                        for file in proj.allObjects.fullFilePaths {
-//                            let path = file.value
-//                            path.url(with: { (<#SourceTreeFolder#>) -> URL in
-//                                <#code#>
-//                            })
-//                            path.url(with: { (foder) -> URL in
-//
-//                            })
-//                            print(path)
-//                        }
-
-                    }
                     self.imageMain.filePath = _url.absoluteString
                     let image = NSImage(byReferencingFile: _url.path)!
                     DispatchQueue.main.async { self.imageMain.image = image }

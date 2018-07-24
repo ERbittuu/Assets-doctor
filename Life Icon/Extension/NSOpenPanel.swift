@@ -34,11 +34,13 @@ extension NSOpenPanel {
         allowsMultipleSelection = false
         canChooseDirectories = true
         canChooseFiles = false
+        canChooseFiles = false
         canCreateDirectories = false
         canSelectHiddenExtension = false
         prompt = "Select Destination"
         showsHiddenFiles = false
         showsTagField = false
+        
         
         beginSheetModal(for: window) { (response) in
             if response == .OK, let image = self.urls.first {

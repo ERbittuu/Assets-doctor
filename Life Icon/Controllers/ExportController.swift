@@ -77,6 +77,23 @@ class ExportController: NSViewController {
     
     @IBAction func onExportClick(_ sender: Any) {
         
+//        if _url.pathExtension == "xcodeproj" {
+//
+//            //                        let proj = try! XCProjectFile(xcodeprojURL: _url)
+//            //                        print(proj)
+//            //
+//            //                        for file in proj.allObjects.fullFilePaths {
+//            //                            let path = file.value
+//            //                            path.url(with: { (<#SourceTreeFolder#>) -> URL in
+//            //                                <#code#>
+//            //                            })
+//            //                            path.url(with: { (foder) -> URL in
+//            //
+//            //                            })
+//            //                            print(path)
+//            //                        }
+//
+//        }
         if let window = self.view.window {
             NSOpenPanel().selectFolder(window: window) { (url) in
                 if var _url = url {
@@ -304,9 +321,7 @@ class ExportController: NSViewController {
         
         DispatchQueue.main.async {
             self.dismiss(nil)
-            NSAlert.dialogWith(text: "Icon converted successfully!! 😊", buttonTitle: "Open", completion: {
-                NSWorkspace.shared.open(url)
-            })
+            NSAlert.dialogThanks(url: url)
         }
         
         print("convert done")
