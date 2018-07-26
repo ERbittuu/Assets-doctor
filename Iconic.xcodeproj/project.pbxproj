@@ -33,7 +33,6 @@
 		2D8ED3B220FDB8EC0034E444 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D8ED3B520FDB8EC0034E444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D8ED3B720FDB8EC0034E444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D8ED3B820FDB8EC0034E444 /* icons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = icons.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +101,6 @@
 				2D8ED3B220FDB8EC0034E444 /* Assets.xcassets */,
 				2D8ED3B420FDB8EC0034E444 /* Main.storyboard */,
 				2D8ED3B720FDB8EC0034E444 /* Info.plist */,
-				2D8ED3B820FDB8EC0034E444 /* icons.entitlements */,
 			);
 			path = Iconic;
 			sourceTree = "<group>";
