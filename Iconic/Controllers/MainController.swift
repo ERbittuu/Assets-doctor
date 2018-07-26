@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Life Icon
+//  Iconic
 //
 //  Created by Laptop on 6/29/17.
 //  Copyright © 2017 Armonia. All rights reserved.

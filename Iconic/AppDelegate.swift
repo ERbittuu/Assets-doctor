@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Life Icon
+//  Iconic
 //
 //  Created by Utsav Patel on 7/17/18.
 //  Copyright © 2018 erbittuu. All rights reserved.
@@ -26,7 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         NSEvent.addGlobalMonitorForEvents(matching: [.leftMouseUp]) { event in
             if event.type == .leftMouseUp {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                     if #available(OSX 10.13, *) {
                         let drag = NSPasteboard(name: NSPasteboard.Name.drag)
                         drag.clearContents()

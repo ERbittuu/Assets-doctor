@@ -1,6 +1,6 @@
 //
 //  DropView.swift
-//  Life Icon
+//  Iconic
 //
 //  Created by Utsav Patel on 7/18/18.
 //  Copyright © 2018 erbittuu. All rights reserved.

@@ -15,11 +15,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Life Icon" id="1Xt-HY-uBw">
+                            <menuItem title="Iconic" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Life Icon" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="Iconic" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Life Icon" id="5kV-Vb-QxS">
+                                        <menuItem title="About Iconic" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -33,7 +33,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide Life Icon" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide Iconic" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -51,7 +51,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit Life Icon" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit Iconic" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -116,7 +116,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="Life Icon Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="Iconic Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -130,7 +130,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Life_Icon" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Iconic" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-268" y="698"/>
@@ -165,7 +165,7 @@
         <!--Main Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="MainController" customModule="Life_Icon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="MainController" customModule="Iconic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="256" height="336"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,7 +176,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="256" height="256"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <imageView focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CEJ-Ts-gZu" customClass="DropView" customModule="Life_Icon" customModuleProvider="target">
+                                        <imageView focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CEJ-Ts-gZu" customClass="DropView" customModule="Iconic" customModuleProvider="target">
                                             <rect key="frame" x="-3" y="-3" width="262" height="262"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="256" id="Kz2-7h-uSh"/>
@@ -205,8 +205,8 @@
                                             <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" imageScaling="axesIndependently" image="bartop" id="dUO-ks-MIG"/>
                                         </imageView>
                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ubM-aJ-3yl">
-                                            <rect key="frame" x="83" y="12" width="105" height="16"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" focusRingType="none" alignment="left" title="Icon Generator " id="By3-NG-myF">
+                                            <rect key="frame" x="108" y="12" width="80" height="16"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" focusRingType="none" alignment="left" title="Iconic" id="By3-NG-myF">
                                                 <font key="font" size="12" name="HiraKakuPro-W6"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -215,9 +215,9 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ubM-aJ-3yl" firstAttribute="centerY" secondItem="WW6-Mt-7Mn" secondAttribute="centerY" id="7Hw-of-W0B"/>
-                                        <constraint firstItem="ubM-aJ-3yl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WW6-Mt-7Mn" secondAttribute="leading" id="B0X-1k-bIE"/>
+                                        <constraint firstItem="ubM-aJ-3yl" firstAttribute="leading" secondItem="WW6-Mt-7Mn" secondAttribute="leading" constant="110" id="B0X-1k-bIE"/>
                                         <constraint firstItem="F0U-kY-xn6" firstAttribute="leading" secondItem="WW6-Mt-7Mn" secondAttribute="leading" id="Vqa-Gq-bba"/>
-                                        <constraint firstAttribute="trailing" secondItem="ubM-aJ-3yl" secondAttribute="trailing" constant="70" id="XeP-r5-Zb8"/>
+                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ubM-aJ-3yl" secondAttribute="trailing" constant="70" id="XeP-r5-Zb8"/>
                                         <constraint firstItem="F0U-kY-xn6" firstAttribute="top" secondItem="WW6-Mt-7Mn" secondAttribute="top" id="ZqG-wq-rVB"/>
                                         <constraint firstAttribute="bottom" secondItem="F0U-kY-xn6" secondAttribute="bottom" id="n32-lY-sTO"/>
                                         <constraint firstAttribute="trailing" secondItem="F0U-kY-xn6" secondAttribute="trailing" id="yjH-s8-Mro"/>
@@ -312,7 +312,7 @@
         <!--Export Controller-->
         <scene sceneID="4CH-jj-Hve">
             <objects>
-                <viewController id="QKj-qi-8HL" customClass="ExportController" customModule="Life_Icon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QKj-qi-8HL" customClass="ExportController" customModule="Iconic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" focusRingType="none" id="TdZ-tY-7kh">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                         <autoresizingMask key="autoresizingMask"/>
