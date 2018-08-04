@@ -13,7 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var mainWindow: NSWindow!
     var lastPoint = NSPoint.zero
-
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         mainWindow = NSApplication.shared.windows[0]

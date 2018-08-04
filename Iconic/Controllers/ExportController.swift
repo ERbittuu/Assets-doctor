@@ -33,19 +33,6 @@ class ExportController: NSViewController {
                     return  [(2, 60, type.string, type.string.capFirst+"Play"), (3, 60, type.string, type.string.capFirst+"Play")]
                 case .universal:
                     return  [(1, 0, type.string, type.string.capFirst), (2, 0, type.string, type.string.capFirst), (3, 0, type.string, type.string.capFirst)]
-//                {
-//                    "idiom" : "universal",
-//                    "filename" : "bartop.png",
-//                    "scale" : "1x"
-//                },
-//                {
-//                    "idiom" : "universal",
-//                    "scale" : "2x"
-//                },
-//                {
-//                    "idiom" : "universal",
-//                    "scale" : "3x"
-//                }
             }
         }
     }
@@ -64,6 +51,10 @@ class ExportController: NSViewController {
     @IBOutlet weak var segment: NSSegmentedControl!
     @IBOutlet weak var saveButton: NSButton!
     @IBOutlet weak var iconsetButton: NSButton!
+    
+    @IBOutlet weak var nameField: NSTextField!
+    @IBOutlet weak var nameTitle: NSTextField!
+    
     @IBOutlet weak var table: NSTableView!
 
     var segmentSelected = [Int]()
@@ -73,32 +64,31 @@ class ExportController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let _name = self.name {
+            nameField.stringValue = _name
+        }
     }
     
     @IBAction func onExportClick(_ sender: Any) {
         
-//        if _url.pathExtension == "xcodeproj" {
-//
-//            //                        let proj = try! XCProjectFile(xcodeprojURL: _url)
-//            //                        print(proj)
-//            //
-//            //                        for file in proj.allObjects.fullFilePaths {
-//            //                            let path = file.value
-//            //                            path.url(with: { (<#SourceTreeFolder#>) -> URL in
-//            //                                <#code#>
-//            //                            })
-//            //                            path.url(with: { (foder) -> URL in
-//            //
-//            //                            })
-//            //                            print(path)
-//            //                        }
-//
-//        }
+        if self.iconsetButton.state == .on {
+            let nameNew = self.nameField.stringValue
+            if nameNew.count > 0  {
+                self.name = nameNew
+            } else {
+                DispatchQueue.main.async {
+                    NSAlert.dialogWith(text: "Please enter icon name.", warning: true)
+                    self.nameField.becomeFirstResponder()
+                }
+                return
+            }
+        }
+        
         if let window = self.view.window {
             NSOpenPanel().selectFolder(window: window) { (url) in
                 if var _url = url {
                     if self.iconsetButton.state == .on {
-
+                        
                         if !self.createIconSetDir(url: &_url, name: self.segmentSelected.contains(5) ? self.name! : nil) {
                             DispatchQueue.main.async {
                                 NSAlert.dialogWith(text: "Icon set already available!!", warning: true)
@@ -135,7 +125,7 @@ class ExportController: NSViewController {
                 // 1x, 2x, 3x selected
                 if index != 5 {
                     print("Next index is for icon, it is not allowed")
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { NSAlert.dialogWith(text: "Can't select it!!!") }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { NSAlert.dialogWith(text: "Can't select icon slicing and scale both!!!") }
                     segment.trackingMode = .selectOne
                     self.segment.selectSegment(withTag: self.segmentSelected.first!)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -149,8 +139,9 @@ class ExportController: NSViewController {
             } else {
                 // 1x, 2x, 3x not selected
                 if index == 5 {
+                    
                     print("Next index is for 1x, 2x, 3x selected, it is not allowed")
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { NSAlert.dialogWith(text: "Can't select it!!!") }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { NSAlert.dialogWith(text: "Can't select scale and icon slicing both!!!") }
                     segment.trackingMode = .selectOne
                     self.segment.selectSegment(withTag: self.segmentSelected.first!)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -177,6 +168,9 @@ class ExportController: NSViewController {
         saveButton.isEnabled = !segmentSelected.isEmpty
         iconsetButton.isEnabled = !segmentSelected.isEmpty
         
+        nameField.isHidden = !segmentSelected.contains(5)
+        nameTitle.isHidden = !segmentSelected.contains(5)
+            
         prepeareList()
     }
     

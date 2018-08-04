@@ -11,7 +11,7 @@ import Cocoa
 class MainController: NSViewController {
 
     let exportControllerOpen = NSStoryboardSegue.Identifier(rawValue: "ExportControllerOpen")
-    let defaultImaeg = NSImage(imageLiteralResourceName: "App-Icon-Default")
+    let defaultImage = NSImage(imageLiteralResourceName: "App-Icon-Default")
     
     @IBOutlet weak var imageMain: DropView!
     
@@ -30,7 +30,7 @@ class MainController: NSViewController {
     }
 
     @IBAction func onExportClick(_ sender: Any) {
-        if imageMain.image == defaultImaeg {
+        if imageMain.image == defaultImage {
             NSAlert.dialogWith(text: "Please select image!!")
         }else{
             performSegue(withIdentifier: exportControllerOpen, sender: nil)

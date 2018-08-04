@@ -63,25 +63,9 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="File" id="bib-Uj-vzu">
                                     <items>
-                                        <menuItem title="New" keyEquivalent="n" id="Was-JA-tGl">
-                                            <connections>
-                                                <action selector="newDocument:" target="Ady-hI-5gd" id="4Si-XN-c54"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
-                                            <connections>
-                                                <action selector="openDocument:" target="Ady-hI-5gd" id="bVn-NM-KNZ"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
                                         <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
                                             <connections>
                                                 <action selector="performClose:" target="Ady-hI-5gd" id="HmO-Ls-i7Q"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Save…" keyEquivalent="s" id="pxx-59-PXV">
-                                            <connections>
-                                                <action selector="saveDocument:" target="Ady-hI-5gd" id="teZ-XB-qJY"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -94,12 +78,6 @@
                                         <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
                                             <connections>
                                                 <action selector="performMiniaturize:" target="Ady-hI-5gd" id="VwT-WD-YPe"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Zoom" id="R4o-n2-Eq4">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="performZoom:" target="Ady-hI-5gd" id="DIl-cC-cCs"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
@@ -182,7 +160,7 @@
                                                 <constraint firstAttribute="width" constant="256" id="Kz2-7h-uSh"/>
                                                 <constraint firstAttribute="width" secondItem="CEJ-Ts-gZu" secondAttribute="height" multiplier="1:1" id="hwh-31-DOb"/>
                                             </constraints>
-                                            <imageCell key="cell" focusRingType="none" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="photo" image="App-Icon-Default" id="MkO-sI-o81"/>
+                                            <imageCell key="cell" focusRingType="none" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="photo" image="App-Icon-Default" id="MkO-sI-o81"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -202,7 +180,7 @@
                                     <subviews>
                                         <imageView focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F0U-kY-xn6">
                                             <rect key="frame" x="0.0" y="0.0" width="256" height="40"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" imageScaling="axesIndependently" image="bartop" id="dUO-ks-MIG"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" imageScaling="axesIndependently" image="Top" id="dUO-ks-MIG"/>
                                         </imageView>
                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ubM-aJ-3yl">
                                             <rect key="frame" x="108" y="12" width="80" height="16"/>
@@ -436,6 +414,8 @@ Gw
                                         <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="ZsM-Aj-xpg">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">s</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="onExportClick:" target="QKj-qi-8HL" id="usa-hh-F56"/>
@@ -448,16 +428,34 @@ Gw
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <textField hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UOT-Kw-o5w">
+                                        <rect key="frame" x="154" y="20" width="122" height="23"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="icon name" id="ifG-G9-fHY">
+                                            <font key="font" size="12" name="HelveticaNeue"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="73w-Lx-BW8">
+                                        <rect key="frame" x="104" y="23" width="44" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Name:" id="kOy-Xh-PXk">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="R09-c0-bNC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="P47-dg-aaC" secondAttribute="leading" constant="20" symbolic="YES" id="73U-3u-4Xf"/>
+                                    <constraint firstItem="R09-c0-bNC" firstAttribute="leading" secondItem="UOT-Kw-o5w" secondAttribute="trailing" constant="8" id="5KD-vr-mkC"/>
                                     <constraint firstItem="3DR-nw-4zV" firstAttribute="centerY" secondItem="qau-Kk-8Wb" secondAttribute="centerY" id="74w-Z1-d2t"/>
                                     <constraint firstItem="3DR-nw-4zV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="P47-dg-aaC" secondAttribute="leading" constant="20" symbolic="YES" id="8b1-hv-dQE"/>
+                                    <constraint firstItem="73w-Lx-BW8" firstAttribute="centerY" secondItem="UOT-Kw-o5w" secondAttribute="centerY" id="8c1-1f-zLP"/>
                                     <constraint firstItem="3DR-nw-4zV" firstAttribute="centerY" secondItem="R09-c0-bNC" secondAttribute="centerY" id="AL6-LU-hlM"/>
                                     <constraint firstItem="t5g-JN-UFF" firstAttribute="leading" secondItem="eCT-hr-5YF" secondAttribute="leading" constant="-16" id="APF-VR-LDj"/>
                                     <constraint firstAttribute="height" constant="360" id="CJ8-xB-ZvL"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qau-Kk-8Wb" secondAttribute="trailing" constant="20" symbolic="YES" id="M4T-NV-Vvz"/>
                                     <constraint firstItem="3DR-nw-4zV" firstAttribute="trailing" secondItem="PD1-qk-bIh" secondAttribute="trailing" id="PZL-Zh-b8X"/>
+                                    <constraint firstItem="UOT-Kw-o5w" firstAttribute="centerY" secondItem="R09-c0-bNC" secondAttribute="centerY" id="Q6z-bJ-jNX"/>
                                     <constraint firstItem="qau-Kk-8Wb" firstAttribute="leading" secondItem="PD1-qk-bIh" secondAttribute="leading" id="Wt5-Km-ru4"/>
                                     <constraint firstAttribute="bottom" secondItem="qau-Kk-8Wb" secondAttribute="bottom" constant="20" id="X6Y-VK-4pm"/>
                                     <constraint firstItem="t5g-JN-UFF" firstAttribute="top" secondItem="eCT-hr-5YF" secondAttribute="bottom" constant="20" id="XJJ-To-1VN"/>
@@ -465,6 +463,8 @@ Gw
                                     <constraint firstItem="t5g-JN-UFF" firstAttribute="trailing" secondItem="eCT-hr-5YF" secondAttribute="trailing" constant="16" id="Y63-ZQ-7NC"/>
                                     <constraint firstItem="3DR-nw-4zV" firstAttribute="leading" secondItem="R09-c0-bNC" secondAttribute="trailing" constant="8" id="ZTx-Ys-2rL"/>
                                     <constraint firstItem="6RR-F4-gGG" firstAttribute="top" secondItem="P47-dg-aaC" secondAttribute="top" constant="16" id="du5-kJ-GWK"/>
+                                    <constraint firstItem="UOT-Kw-o5w" firstAttribute="leading" secondItem="73w-Lx-BW8" secondAttribute="trailing" constant="8" id="f0Y-Dd-njY"/>
+                                    <constraint firstItem="73w-Lx-BW8" firstAttribute="leading" secondItem="qau-Kk-8Wb" secondAttribute="trailing" constant="20" id="i8x-yZ-DwR"/>
                                     <constraint firstItem="eCT-hr-5YF" firstAttribute="centerX" secondItem="P47-dg-aaC" secondAttribute="centerX" id="jVs-4m-HyN"/>
                                     <constraint firstItem="eCT-hr-5YF" firstAttribute="top" secondItem="6RR-F4-gGG" secondAttribute="bottom" constant="20" id="qSn-OE-SBZ"/>
                                     <constraint firstItem="qau-Kk-8Wb" firstAttribute="top" secondItem="t5g-JN-UFF" secondAttribute="bottom" constant="20" id="xIi-MH-uzB"/>
@@ -481,6 +481,8 @@ Gw
                     </view>
                     <connections>
                         <outlet property="iconsetButton" destination="R09-c0-bNC" id="ObM-od-MEU"/>
+                        <outlet property="nameField" destination="UOT-Kw-o5w" id="i4F-jG-RYs"/>
+                        <outlet property="nameTitle" destination="73w-Lx-BW8" id="SRZ-ih-y6O"/>
                         <outlet property="saveButton" destination="3DR-nw-4zV" id="ELJ-Hk-IA4"/>
                         <outlet property="segment" destination="eCT-hr-5YF" id="09t-52-GRI"/>
                         <outlet property="table" destination="PD1-qk-bIh" id="rLi-yW-Z6G"/>
@@ -492,8 +494,8 @@ Gw
         </scene>
     </scenes>
     <resources>
-        <image name="App-Icon-Default" width="256" height="256"/>
-        <image name="bartop" width="1254" height="100"/>
+        <image name="App-Icon-Default" width="170" height="170"/>
+        <image name="Top" width="418" height="33"/>
         <image name="export" width="22.399999618530273" height="22.399999618530273"/>
         <image name="icar" width="28" height="26"/>
         <image name="imac" width="22.399999618530273" height="22.399999618530273"/>
