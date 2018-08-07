@@ -138,6 +138,9 @@
 					2D8ED3AA20FDB8EA0034E444 = {
 						CreatedOnToolsVersion = 9.3;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
 							com.apple.Sandbox = {
 								enabled = 1;
 							};

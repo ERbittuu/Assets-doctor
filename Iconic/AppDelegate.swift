@@ -18,6 +18,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         mainWindow = NSApplication.shared.windows[0]
         
+        
+        mainWindow.delegate = self
+        
         func distance(a: NSPoint, b: NSPoint) -> CGFloat {
             let xDist = a.x - b.x
             let yDist = a.y - b.y
@@ -95,5 +98,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.showWindow()
         }
         return true
+    }
+}
+
+
+
+extension AppDelegate: NSWindowDelegate {
+    
+    func window(_ window: NSWindow, willPositionSheet sheet: NSWindow, using rect: NSRect) -> NSRect {
+        var rect = rect
+        rect.origin.y = rect.origin.y - 40
+        return rect;
     }
 }
