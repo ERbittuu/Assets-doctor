@@ -323,7 +323,7 @@ Gw
                                     </button>
                                     <segmentedControl focusRingType="none" verticalHuggingPriority="750" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCT-hr-5YF">
                                         <rect key="frame" x="38" y="284" width="404" height="23"/>
-                                        <segmentedCell key="cell" borderStyle="border" focusRingType="none" alignment="left" segmentDistribution="fill" style="capsule" trackingMode="selectAny" id="3Eb-UH-7ok">
+                                        <segmentedCell key="cell" borderStyle="border" focusRingType="none" alignment="left" segmentDistribution="fill" style="texturedRounded" trackingMode="selectAny" id="3Eb-UH-7ok">
                                             <font key="font" metaFont="system"/>
                                             <segments>
                                                 <segment toolTip="Mac icon" image="imac" imageScaling="proportionallyUpOrDown" width="60"/>

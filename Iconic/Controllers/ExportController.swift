@@ -71,17 +71,16 @@ class ExportController: NSViewController {
     
     @IBAction func onExportClick(_ sender: Any) {
         
-        if self.iconsetButton.state == .on {
-            let nameNew = self.nameField.stringValue
-            if nameNew.count > 0  {
-                self.name = nameNew
-            } else {
-                DispatchQueue.main.async {
-                    NSAlert.dialogWith(text: "Please enter icon name.", warning: true)
-                    self.nameField.becomeFirstResponder()
-                }
-                return
+        // required changes name
+        let nameNew = self.nameField.stringValue
+        if nameNew.count > 0  {
+            self.name = nameNew
+        } else {
+            DispatchQueue.main.async {
+                NSAlert.dialogWith(text: "Please enter icon name.", warning: true)
+                self.nameField.becomeFirstResponder()
             }
+            return
         }
         
         if let window = self.view.window {
